@@ -1,0 +1,276 @@
+/*
+Theme Name: WL Test Theme
+Author: Kostia Kobziev
+Description: Тема для выполнения задачи WL Test
+Version: 1.0
+*/
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header,
+.site-header .container {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.site-header .logo img {
+    max-height: 70px;
+}
+
+.site-header .phone-number {
+    font-weight: bold;
+}
+
+.site-header .box-shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-footer {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.site-footer .footer-top {
+    background-color: #222222;
+    padding: 20px 0;
+}
+
+.site-footer .footer-bottom {
+    background-color: #111111;
+    padding: 20px 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+.content {
+    padding-bottom: 100px;
+    padding-top: 80px;
+    /* Высота футера */
+}
+
+.site-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    /* Высота футера */
+}
+
+
+.latest-cars-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.latest-car-item {
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    text-align: center;
+}
+
+.latest-car-item a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.latest-car-item h3 {
+    margin-top: 10px;
+}
+
+.latest-car-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.car-slider {
+    display: flex;
+    overflow-x: scroll;
+    padding: 10px;
+    margin-bottom: 20px;
+    scroll-snap-type: x mandatory;
+}
+
+.car-slide {
+    flex: 0 0 calc(18.18% - 10px);
+    margin: 0 5px;
+    scroll-snap-align: center;
+    text-align: center;
+}
+
+.car-category {
+    margin-bottom: 10px;
+}
+
+.car-image {
+    margin-bottom: 10px;
+}
+
+.car-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.car-meta {
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+    text-align: left;
+}
+
+.car-meta span.meta-field {
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+}
+
+.car-color {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    margin: 0 auto;
+}
+
+.meta-field {
+    display: block;
+    margin-top: 5px;
+}
+
+.car-slider::-webkit-scrollbar {
+    width: 3px;
+    background-color: #ccc;
+}
+
+.car-slider::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+.car-slider::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.scroll-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.single-car-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.car-slide {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(20% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.car-category {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.car-image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.car-title {
+    margin-bottom: 10px;
+}
+
+.single-car-container,
+.single-car-container .car-meta {
+    text-align: center;
+}
+
+.car-color {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+}
+
+.meta-field {
+    margin-bottom: 5px;
+}
+
+.meta-field span.meta-label {
+    font-weight: bold;
+}
+
+.scroll-indicator {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-weight: bold;
+    animation: blink-animation 1s infinite;
+}
+
+@keyframes blink-animation {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .car-slide {
+        flex: 0 0 calc(60% - 10px);
+    }
+}
